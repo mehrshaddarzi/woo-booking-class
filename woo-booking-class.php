@@ -12,9 +12,9 @@
  */
 
 // Create a taxonomy in woocommece has_term( 'class-time', 'product_cat', $post )
-// we user wp user avatar @https://wordpress.org/plugins/wp-user-avatar/
+// Use wp-user-avatar @https://wordpress.org/plugins/wp-user-avatar/
 // Use Wp-parsidate For Calender
-// Refresh permalink after setup
+// Refresh permalink After setup
 
 // Define Variable
 define( 'WooCommerce_Booking_Class_Url', plugins_url( '/', __FILE__ ) );
