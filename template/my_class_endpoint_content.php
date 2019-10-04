@@ -6,7 +6,7 @@ if ( $wpdb->num_rows == 0 ) {
 	?>
     <div class="panel panel-default">
         <div class="panel-body">
-            <p style="text-align: center;">شما هیچ کلاسی برای تشکیل در آنده ندارید.</p>
+            <p style="text-align: center;">شما هیچ کلاسی برای تشکیل در آینده ندارید.</p>
         </div>
     </div>
 	<?php
