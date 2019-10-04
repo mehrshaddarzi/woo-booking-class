@@ -11,11 +11,9 @@
  * Domain Path: /languages
  */
 
-// Create a taxonomy in woocommece
-//has_term( 'class-time', 'product_cat', $post )
-
+// Create a taxonomy in woocommece has_term( 'class-time', 'product_cat', $post )
 // we user wp user avatar @https://wordpress.org/plugins/wp-user-avatar/
-
+// Use Wp-parsidate For Calender
 // Refresh permalink after setup
 
 // Define Variable
@@ -74,13 +72,3 @@ function woo_booking_locate_template( $template, $template_name, $template_path 
 	}
 	return $template;
 }
-
-
-// Test Parsi Date
-add_action( 'admin_init', function () {
-//	$time = '1398-5-5';
-//	$date = gregdate("Y-m-d",$time);
-//	print_r($date);
-//	exit;
-} );
-
