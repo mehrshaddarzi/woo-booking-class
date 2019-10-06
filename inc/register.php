@@ -75,15 +75,27 @@ function bbloomer_save_name_fields( $customer_id ) {
 add_filter( 'manage_users_columns', 'pippin_add_user_id_column' );
 function pippin_add_user_id_column( $columns ) {
 	$columns['billing_phone'] = 'شماره همراه';
-	unset($columns['posts']);
+	$columns['all_class']     = 'کل کلاس ها';
+	$columns['anjam_class']   = 'برگزار شده';
+	unset( $columns['posts'] );
 	return $columns;
 }
 
 add_action( 'manage_users_custom_column', 'pippin_show_user_id_column_content', 10, 3 );
 function pippin_show_user_id_column_content( $value, $column_name, $user_id ) {
+	global $wpdb;
 	$user = get_userdata( $user_id );
 	if ( 'billing_phone' == $column_name ) {
 		return get_user_meta( $user_id, 'billing_phone', true );
 	}
+	if ( 'all_class' == $column_name ) {
+		$_s = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}woo_booking WHERE `user_id` = {$user_id}" );
+		return number_format( $_s );
+	}
+	if ( 'anjam_class' == $column_name ) {
+		$_s = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}woo_booking WHERE `user_id` = {$user_id} AND `status` = 2" );
+		return number_format( $_s );
+	}
+
 	return $value;
 }
