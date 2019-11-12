@@ -23,14 +23,12 @@ function woo_booking_top_bar() {
 			} else {
 			?>
 	        top_bar_tag.html(`<a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" style="
-    display: block;
-    background: #3385ff;
-    color: #fff;
+        display: block;
+    color: #6e9bde;
     padding: 8px;
     border-radius: 10px;
-    min-width: 150px;
     text-align: center;
-    margin-left: -14px;
+    margin-top: -4px;
 ">ورود یا ثبت نام</a>`);
 
 			<?php
