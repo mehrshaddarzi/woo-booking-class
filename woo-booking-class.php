@@ -62,7 +62,7 @@ require_once WooCommerce_Booking_Class_Path . '/inc/product_tab.php';
 require_once WooCommerce_Booking_Class_Path . '/inc/cart.php';
 require_once WooCommerce_Booking_Class_Path . '/inc/admin_page.php';
 
-// WooCommerce
+// Change WooCommerce template with Plugin
 add_filter( 'woocommerce_locate_template', 'woo_booking_locate_template', 10, 3 );
 function woo_booking_locate_template( $template, $template_name, $template_path ) {
 	$re = '/woocommerce\/(templates\/)?(.*)/m';
